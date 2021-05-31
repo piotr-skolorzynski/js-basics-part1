@@ -30,7 +30,6 @@ const labirynth = {
         showAnimals: function() { console.log(this.animals) },
         showNonAnimals: function() { console.log(this.nonAnimals) }
     }
-
 /*
  5. Napisz pętle, która iteruje od 1 do 50 i na każdej wielokrotności 3 wyświetl Fizz, na każdej wielokrotności 5 Buzz,
  a na wielokrotności 3 i 5 FizzBuzz.
@@ -58,7 +57,7 @@ const labirynth = {
 
  */
 
-//  zadanie 2
+//******  zadanie 2 *******
 
 const handleHigherValue = (num1, num2) => {
     let result = 0;
@@ -84,7 +83,8 @@ console.log(result2);
 let result3 = handleHigherValue('aaa', -5);
 console.log(result3);
 
-// zadanie 3
+//****** zadanie 3 *******
+
 const uppercaseFirstLetter = string => {
     let result = '';
     if (typeof string !== 'string' || string === '') {
@@ -109,10 +109,14 @@ console.log(string);
 let string2 = uppercaseFirstLetter(12);
 console.log(string2);
 
-// zadanie 4
+//******* zadanie 4 ********
 
 // a) 'Garfield'
 console.log(labirynth.animals[1].name);
 
 //  b) 'elephant'
 console.log(labirynth.animals[3].species);
+
+// c) 'flying'
+console.log(labirynth.nonAnimals[0].skills[1]);
+
