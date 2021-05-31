@@ -57,3 +57,32 @@ const labirynth = {
  Input: undefined                   Output: 'to nie string'
 
  */
+
+//  zadanie 2
+
+const handleHigherValue = (num1, num2) => {
+    let result = 0;
+    if (typeof num1 !== "number") {
+        result = 'Pierwszy argument to nie liczba';
+    } else if (typeof num2 !== "number") {
+        result = 'Drugi argument to nie liczba';
+    } else {
+        num1 >= num2 ? result = num1 : result = num2;
+    }
+    return result;
+};
+
+// Input: 2, 5        Output: 5
+let result = handleHigherValue(2, 5);
+console.log(result);
+
+// Input: 2, -5       Output: 2
+let result2 = handleHigherValue(2, -5);
+console.log(result2);
+
+// Input: 'aaa', -5   Output: 'argumenty to nie liczby'
+let result3 = handleHigherValue('aaa', -5);
+console.log(result3);
+
+
+// zadanie 3
