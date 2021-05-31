@@ -84,5 +84,35 @@ console.log(result2);
 let result3 = handleHigherValue('aaa', -5);
 console.log(result3);
 
-
 // zadanie 3
+const uppercaseFirstLetter = string => {
+    let result = '';
+    if (typeof string !== 'string' || string === '') {
+        result = 'To nie jest string';
+    } else {
+        // let firstLetter = string.substring(0,1).toLocaleUpperCase();
+        // console.log(firstLetter)
+        // let restOfString = string.slice(1);
+        // console.log(restOfString);
+        // result = firstLetter.concat(restOfString);
+        // refaktoring
+        result = string.substring(0,1).toUpperCase().concat(string.slice(1));
+    }
+    return result;
+}
+
+//  Input: uppercaseFirstLetter('kamil') Output: 'Kamil'
+let string = uppercaseFirstLetter('kamil');
+console.log(string);
+
+// Input: uppercaseFirstLetter(12) Output: 'to nie jest string'
+let string2 = uppercaseFirstLetter(12);
+console.log(string2);
+
+// zadanie 4
+
+// a) 'Garfield'
+console.log(labirynth.animals[1].name);
+
+//  b) 'elephant'
+console.log(labirynth.animals[3].species);
