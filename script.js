@@ -120,3 +120,23 @@ console.log(labirynth.animals[3].species);
 // c) 'flying'
 console.log(labirynth.nonAnimals[0].skills[1]);
 
+//******* zadanie 5 ********
+
+
+
+//******* zadanie 6 ********
+
+const pizzaMenu = [
+    {name: 'Margarita', price: 15, ingredients: ['ser', 'sos', 'oregano']},
+    {name: 'Roma', price: 18, ingredients: ['ser', 'sos', 'szynka', 'pieczarki']},
+    {name: 'Salami', price: 18, ingredients: ['ser', 'sos', 'salami']}
+];
+
+const handlePizzaMenu = pizzaMenu => {
+    pizzaMenu.forEach(pizza => {
+        console.log(`${pizza.name} (${pizza.ingredients}) - ${pizza.price}`);
+    });
+};
+
+handlePizzaMenu(pizzaMenu);
+
