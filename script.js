@@ -60,6 +60,10 @@ const labirynth = {
 // ********************* Solutions *************************************************
 
 
+// ******  exercise 1 *******
+
+console.log('Poprawnie dodany skrypt');
+
 //******  exercise 2 *******
 
 const handleHigherValue = (num1, num2) => {
