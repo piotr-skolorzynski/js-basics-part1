@@ -125,26 +125,22 @@ console.log(labirynth.nonAnimals[0].skills[1]);
 
 //******* exercise 5 ********
 
-const generatePatern = () => {
+const generatePattern = () => {
     const array = [];
     for (let i=1; i<=50; i++) {
-        // debugger;
         if (i!==0 && i%3 === 0 && i%15 !== 0) {
             array.push('Fizz');
-            // console.log('Fizz');
         }else if (i%5 === 0 && i%15 !==0) {
             array.push('Buzz');
-            // console.log('Buzz')
         } else if (i%3 === 0 && i%5 === 0 && i%15 ===0) {
             array.push('FizzBuzz');
-            // console.log('FizzBuzz')
         }
     }
     return array;
 }
 
-let patern = generatePatern();
-console.log(patern);
+let pattern = generatePattern();
+console.log(pattern);
 
 //******* exercise 6 ********
 
