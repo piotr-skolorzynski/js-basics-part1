@@ -57,7 +57,10 @@ const labirynth = {
 
  */
 
-//******  zadanie 2 *******
+// ********************* Solutions *************************************************
+
+
+//******  exercise 2 *******
 
 const handleHigherValue = (num1, num2) => {
     let result = 0;
@@ -83,7 +86,7 @@ console.log(result2);
 let result3 = handleHigherValue('aaa', -5);
 console.log(result3);
 
-//****** zadanie 3 *******
+//****** exercise 3 *******
 
 const uppercaseFirstLetter = string => {
     let result = '';
@@ -95,7 +98,7 @@ const uppercaseFirstLetter = string => {
         // let restOfString = string.slice(1);
         // console.log(restOfString);
         // result = firstLetter.concat(restOfString);
-        // refaktoring
+        // refactoring
         result = string.substring(0,1).toUpperCase().concat(string.slice(1));
     }
     return result;
@@ -120,11 +123,30 @@ console.log(labirynth.animals[3].species);
 // c) 'flying'
 console.log(labirynth.nonAnimals[0].skills[1]);
 
-//******* zadanie 5 ********
+//******* exercise 5 ********
 
+const generatePatern = () => {
+    const array = [];
+    for (let i=1; i<=50; i++) {
+        // debugger;
+        if (i!==0 && i%3 === 0 && i%15 !== 0) {
+            array.push('Fizz');
+            // console.log('Fizz');
+        }else if (i%5 === 0 && i%15 !==0) {
+            array.push('Buzz');
+            // console.log('Buzz')
+        } else if (i%3 === 0 && i%5 === 0 && i%15 ===0) {
+            array.push('FizzBuzz');
+            // console.log('FizzBuzz')
+        }
+    }
+    return array;
+}
 
+let patern = generatePatern();
+console.log(patern);
 
-//******* zadanie 6 ********
+//******* exercise 6 ********
 
 const pizzaMenu = [
     {name: 'Margarita', price: 15, ingredients: ['ser', 'sos', 'oregano']},
@@ -140,3 +162,40 @@ const handlePizzaMenu = pizzaMenu => {
 
 handlePizzaMenu(pizzaMenu);
 
+//******* exercise 7 ********
+
+const handleString = string => {
+    let result = 0;
+    const regex = /[aeioyuąęóĄĘÓ]/gi; //pattern
+    if (typeof string !== 'string' || string === '') {
+        result = 'to nie string';
+    } else {
+    const array = [...string.match(regex)];
+    result = array.length;
+    }
+    return result;
+}
+
+// Input: 'Kartagina'                 Output: 4
+let word = handleString('Katragina');
+console.log(word);
+
+// Input: 'Mezopotamia'               Output: 6
+let word2 = handleString('Mezopotamia');
+console.log(word2);
+
+// Input: 'Wielki Zderzacz Hadronów'  Output: 8
+let word3 = handleString('Wielki Zderzacz Hadronów');
+console.log(word3);
+
+//  Input: {}                       Output: 'to nie string'
+let word4 = handleString({});
+console.log(word4);
+
+// Input: 345                       Output: 'to nie string'
+let word5 = handleString(345);
+console.log(word5);
+
+// Input: undefined                 Output: 'to nie string'
+let word6 = handleString(undefined);
+console.log(word6);
