@@ -70,13 +70,22 @@ const handleHigherValue = (num1, num2) => {
     let result = 0;
     if (typeof num1 !== "number") {
         result = 'Pierwszy argument to nie liczba';
+    } else if (isNaN(num1)) {
+        result = 'Pierwszy argument to nie liczba'; 
     } else if (typeof num2 !== "number") {
+        result = 'Drugi argument to nie liczba';
+    } else if (isNaN(num2)) {
         result = 'Drugi argument to nie liczba';
     } else {
         num1 >= num2 ? result = num1 : result = num2;
     }
     return result;
 };
+
+// let res = handleHigherValue(NaN, 1);
+// console.log(res);
+// let res2 = handleHigherValue(NaN, 1);
+// console.log(res2);
 
 // Input: 2, 5        Output: 5
 let result = handleHigherValue(2, 5);
@@ -132,7 +141,7 @@ console.log(labirynth.nonAnimals[0].skills[1]);
 const generatePattern = () => {
     const array = [];
     for (let i=1; i<=50; i++) {
-        if (i!==0 && i%3 === 0 && i%15 !== 0) {
+        if (i%3 === 0 && i%15 !== 0) {
             array.push('Fizz');
         }else if (i%5 === 0 && i%15 !==0) {
             array.push('Buzz');
@@ -142,9 +151,6 @@ const generatePattern = () => {
     }
     return array;
 }
-
-let pattern = generatePattern();
-console.log(pattern);
 
 //******* exercise 6 ********
 
