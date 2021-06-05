@@ -150,6 +150,26 @@ const generatePattern = () => {
         }
     }
     return array;
+
+    /*
+        Poniżej mały pokaz Bartka Cytrowskiego jak się ładnie ogarnia to co wyżej, ja zrobiłem odfiltowanie liczb
+    */ 
+    // const generatePattern = () => {
+    // const array = [];
+    // for (let i=1; i<=50; i++) {
+    // const segments = { Fizz: i % 3, Buzz: i % 5 }
+    // const result = Object.entries(segments).filter(([key, value]) => value === 0).map(([key]) => key).sort().reverse().join('');
+    // array.push(result || i);
+    // }
+    // let newArray = [];
+    // newArray = array.filter(el => {
+    //     return typeof el === 'string';
+    // })
+    // return newArray;
+    /*
+        Rozwiązanie Bartka bez liczb
+        Array.from({ length: 50 }, (_, i) => (i % 3 ? '' : 'Fizz') + (i % 5 ? '' : 'Buzz')).filter(Boolean)
+    */
 }
 
 //******* exercise 6 ********
